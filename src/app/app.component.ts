@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bugFix';
+  Selected = '';
+  Connections = ['s3', 'win', 'Oracle']
+  onTypeChange(connection: string) {
+    console.log(connection)
+
+  }
 }
