@@ -3,36 +3,83 @@
     <header>
       <h2>Connections</h2>
     </header>
-
-    <form>
-      <div class="row">
-        <div class="col-lg-6">
-          <mat-form-field class="example-full-width">
-            <mat-label>Connection Type</mat-label>
-            <mat-select #connectionType name='ConnectionType' [(ngModel)]='Selected'
-              (ngModelChange)="onTypeChange(connectionType.value)">
-              <mat-option *ngFor="let connection of Connections" [value]='connection'>
-                {{connection}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div>
-        <div class="col-lg-6">
-          <mat-form-field class="example-full-width" *ngIf='Selected && Selected ==="s3"'>
-            <mat-label>Password</mat-label>
-            <input matInput type='password' placeholder="password">
-          </mat-form-field>
-          <mat-form-field class="example-full-width" *ngIf='Selected && Selected ==="s3"'>
-            <mat-label>Username</mat-label>
-            <input matInput placeholder="Username">
-          </mat-form-field>
-
-          <mat-form-field class="example-full-width" *ngIf='Selected && Selected !=="s3"'>
-            <mat-label>Connection Name</mat-label>
-            <input matInput placeholder="Name">
-          </mat-form-field>
-        </div>
-      </div>
-    </form>
+    <section class='row'>
+      <article class="col-lg-6">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>S.no.</th>
+              <th>Name</th>
+              <th>
+                Action
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1.</td>
+              <td>Ashutosh</td>
+              <td>
+                <mat-form-field>
+                  <mat-select>
+                    <mat-option value='123'>Hello</mat-option>
+                    <mat-option value='123'>Brother</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <article class='col-lg-6'>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>S.no.</th>
+              <th>Name</th>
+              <th>
+                Action
+              </th>
+              <th>
+                second
+              </th>
+              <th>
+                second
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1.</td>
+              <td>Ashutosh</td>
+              <td>
+                <mat-form-field class="half">
+                  <mat-select>
+                    <mat-option value='12'>Hello</mat-option>
+                    <mat-option value='13'>Brother</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field class="half">
+                  <mat-select>
+                    <mat-option value='12'>Hello</mat-option>
+                    <mat-option value='13'>Brother</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field class="half">
+                  <mat-select>
+                    <mat-option value='12'>Hello</mat-option>
+                    <mat-option value='13'>Brother</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
   </mat-card>
 </div>

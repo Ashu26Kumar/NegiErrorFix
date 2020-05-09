@@ -1,3 +1,16 @@
 .example-full-width {
     width: 100%;
   }
+
+::ng-deep  .half .mat-form-field-infix {
+    width: 80px !important;
+}
+::ng-deep  .mat-form-field-infix {
+  padding: 0% ;
+  border: 0;
+  /* width: 100px !important; */
+}
+
+td{
+  width:auto;
+}
